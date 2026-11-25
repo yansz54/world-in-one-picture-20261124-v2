@@ -39,7 +39,7 @@ function fillRect(x: number, y: number, w: number, h: number, c: number): void {
   }
 }
 function setPix(x: number, y: number, c: number): void {
-  if (x < 0 || x >= W || y < 0 || y >= H) return;
+  if (x < 0 || y < 0 || x >= W || y >= H) return;
   const o = (y * W + x) * 4;
   px[o] = (c >>> 24) & 255; px[o + 1] = (c >>> 16) & 255; px[o + 2] = (c >>> 8) & 255; px[o + 3] = c & 255;
 }
